@@ -1,0 +1,33 @@
+# macOS and IDE metadata
+.DS_Store
+.idea/
+.vscode/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+
+# Model weights and checkpoints
+wight/
+weights/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# Local datasets, generated results, and logs
+display_*/
+visualizations/
+figures/
+runs/
+logs/
+*.log
+result.csv
+*_efficiency_results.json
+
