@@ -1,4 +1,4 @@
-"""Frequency enhancement blocks for the DDCM frequency branch."""
+"""Frequency enhancement blocks for the STF-Mamba frequency branch."""
 
 import torch
 import torch.nn as nn
@@ -7,7 +7,7 @@ import torch.nn as nn
 class FEB(nn.Module):
     """Reference FB block with an input LayerNorm and a raw-feature residual.
 
-    The input and output use the DDCM layout [T, C, H, W].  FFT processing is
+    The input and output use the STF-Mamba layout [T, C, H, W]. FFT processing is
     performed independently for each frame; temporal modeling remains in the
     spatio-temporal MB branch.
     """
@@ -47,7 +47,7 @@ class FEB(nn.Module):
 
 
 class FEBLayer(nn.Module):
-    """A stack of independent FEB blocks for one DDCM frequency stage."""
+    """A stack of independent FEB blocks for one STF-Mamba frequency stage."""
 
     def __init__(self, dim, depth=2, norm_eps=1e-6):
         super().__init__()

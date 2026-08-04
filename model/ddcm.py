@@ -8,7 +8,7 @@ from model.up import UpsampleModule
 # from torchinfo import summary
 
 
-class DDCM(nn.Module):
+class STFMamba(nn.Module):
     def __init__(self, is_train=True, fm_channel=768, dstb_ratio=4, shift_c=1 / 3,
                  ms_stmb_depth_1=2, ms_stmb_depth_2=2,
                  sfrb_depth_1=1, sfrb_depth_2=1) -> None:
@@ -47,6 +47,10 @@ class DDCM(nn.Module):
         # fm_glo = self.outputlayer_wight(d8_fm_d, d8_fm_f)
 
         return fm_glo
+
+
+# Backward-compatible name for existing scripts and checkpoints.
+DDCM = STFMamba
 
 
 class CrossAttention(nn.Module):

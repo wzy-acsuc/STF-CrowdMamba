@@ -245,7 +245,7 @@ class SpatioTemporalMB(nn.Module):
 
 
 class SpatioTemporalMBLayer(nn.Module):
-    """A stack of residual spatio-temporal MB blocks for one DDCM stage."""
+    """A stack of residual spatio-temporal MB blocks for one STF-Mamba stage."""
 
     def __init__(self, in_channel, num_blocks=2, d_state=16, expand=2., dropout=0.):
         super().__init__()

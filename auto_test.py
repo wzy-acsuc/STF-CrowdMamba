@@ -16,7 +16,7 @@ canteen  False  train val test  'canteen'   resize to 640 x 360
 venice   False  train val test  'venice' 
 """
 
-parser = argparse.ArgumentParser(description='Multi test')
+parser = argparse.ArgumentParser(description='STF-Mamba multi-checkpoint evaluation')
 parser.add_argument('dataset_path', metavar='DATASET', help='path to dataset')
 parser.add_argument('wights_path', metavar='WP', type=str, help='saved path folder')
 parser.add_argument('-gpu', metavar='GPU', type=str, help='gpu id to use', default='0')

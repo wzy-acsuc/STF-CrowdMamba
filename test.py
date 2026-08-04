@@ -4,7 +4,7 @@ import multiprocessing
 from utils.tester import Tester
 from utils.seed import set_random_seed
 
-parser = argparse.ArgumentParser(description='Single test')
+parser = argparse.ArgumentParser(description='STF-Mamba single-checkpoint evaluation')
 parser.add_argument('-dataset_path', metavar='DATASET', help='path to dataset', default="../bccmfvu/bus")
 parser.add_argument('-pth_path', metavar='PTH', help='path to pth file', default="./wight/bus_t6.pth")
 parser.add_argument('-gpu', metavar='GPU', type=str, help='gpu id to use', default="0")
