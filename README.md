@@ -1,6 +1,6 @@
-# STF-Mamba
+# STF-CrowdMamba
 
-## Video Crowd Counting Based on Spatio-Temporal Mamba and Frequency Enhancement
+## STF-CrowdMamba: Spatio-Temporal Mamba and Spatial-Frequency Refinement for Video Crowd Counting
 
 **基于时空 Mamba 和频域增强的视频人群计数**
 
