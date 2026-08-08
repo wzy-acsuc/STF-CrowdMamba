@@ -1,9 +1,9 @@
 # STF-CrowdMamba: Spatio-Temporal Mamba and Spatial-Frequency Refinement for Video Crowd Counting
 
 ## Overview
-- **We propose a video crowd counting method, termed STF-CrowdMamba, that combines spatio-temporal Mamba modeling with frequency-domain enhancement. Parallel spatio-temporal and frequency-domain branches are constructed to capture long-range dependencies and frequency-domain information, thereby improving complementarity across feature domains. To the best of our knowledge, this is the first study to apply Mamba to multi-frame video crowd counting.
-- **We develop MS-STMB, which arranges consecutiveframe features into a joint temporal-height-width sequence and employs bidirectional selective scanning to establish long-range spatio-temporal associations across frames. Average- and max-pooling paths are further introduced to extract crowd features at different spatial scales.
-- **Experiments on five public video crowd counting datasets demonstrate that STF-CrowdMamba achieves competitive counting performance.
+- **We propose a video crowd counting method, termed STF-CrowdMamba, that combines spatio-temporal Mamba modeling with frequency-domain enhancement. Parallel spatio-temporal and frequency-domain branches are constructed to capture long-range dependencies and frequency-domain information, thereby improving complementarity across feature domains. To the best of our knowledge, this is the first study to apply Mamba to multi-frame video crowd counting.
+- **We develop MS-STMB, which arranges consecutive frame features into a joint temporal-height-width sequence and employs bidirectional selective scanning to establish long-range spatio-temporal associations across frames. Average- and max-pooling paths are further introduced to extract crowd features at different spatial scales.
+- **Experiments on five public video crowd counting datasets demonstrate that STF-CrowdMamba achieves competitive counting performance.
 
 ## Repository Structure
 
