@@ -5,18 +5,30 @@
 - **We develop MS-STMB, which arranges consecutive frame features into a joint temporal-height-width sequence and employs bidirectional selective scanning to establish long-range spatio-temporal associations across frames. Average- and max-pooling paths are further introduced to extract crowd features at different spatial scales.
 - **Experiments on five public video crowd counting datasets demonstrate that STF-CrowdMamba achieves competitive counting performance.
 
-<img width="2700" height="1452" alt="图片1" src="https://github.com/user-attachments/assets/7b155e37-1bc7-4675-82bf-eef36ed86792" />
+<p align="center">
+  <img width="1031" height="564" alt="Overall architecture of STF-CrowdMamba" src="https://github.com/user-attachments/assets/bc7c7f29-3248-494d-b456-5828f73d9b0c" />
+</p>
+
+<p align="center">
+  <b>Figure 1. Overall architecture of STF-CrowdMamba.</b>
+</p>
+
+
+<img width="4234" height="1732" alt="图片3" src="https://github.com/user-attachments/assets/70b09fb8-051c-4c45-a8ab-8f1d767e85fa" />
+
+
+
 
 ## Repository Structure
 
 ```text
 STF-Mamba/
-├── dataset/       # Dataset loading and preprocessing
-├── model/         # STF-Mamba and backbone modules
-├── utils/         # Training, testing, logging, and reproducibility utilities
-├── train.py       # Training entry point
-├── test.py        # Single-checkpoint evaluation
-├── auto_test.py   # Multi-checkpoint evaluation
+├── dataset/       
+├── model/         
+├── utils/         
+├── train.py       
+├── test.py        
+├── auto_test.py   
 └── requirements.txt
 ```
 
