@@ -1,19 +1,8 @@
-# STF-CrowdMamba
-
-## STF-CrowdMamba: Spatio-Temporal Mamba and Spatial-Frequency Refinement for Video Crowd Counting
-
-**基于时空 Mamba 和频域增强的视频人群计数**
-
-Official PyTorch implementation of **STF-Mamba** for video crowd counting.
-
-**Authors:** Zheng-Yan Wu and Miao-Gen Ling
-
-**Affiliation:** School of Computer Science, Nanjing University of Information
-Science & Technology, Nanjing 210044, China
+# STF-CrowdMamba: Spatio-Temporal Mamba and Spatial-Frequency Refinement for Video Crowd Counting
 
 ## Overview
 
-STF-Mamba is designed to model long-range spatio-temporal dependencies while
+STF-CrowdMamba is designed to model long-range spatio-temporal dependencies while
 maintaining efficient computation and complementary feature representations.
 The network contains two parallel branches:
 
