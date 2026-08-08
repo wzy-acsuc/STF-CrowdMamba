@@ -5,6 +5,8 @@
 - **We develop MS-STMB, which arranges consecutive frame features into a joint temporal-height-width sequence and employs bidirectional selective scanning to establish long-range spatio-temporal associations across frames. Average- and max-pooling paths are further introduced to extract crowd features at different spatial scales.
 - **Experiments on five public video crowd counting datasets demonstrate that STF-CrowdMamba achieves competitive counting performance.
 
+<img width="2700" height="1452" alt="图片1" src="https://github.com/user-attachments/assets/7b155e37-1bc7-4675-82bf-eef36ed86792" />
+
 ## Repository Structure
 
 ```text
