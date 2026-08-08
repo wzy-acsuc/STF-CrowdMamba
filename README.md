@@ -90,11 +90,6 @@ Model weights and datasets are intentionally excluded from Git.
 python train.py /path/to/Bus ./checkpoints/bus /path/to/Bus/bus_roi.npy
 ```
 
-The default model uses two MS-STMB blocks in each spatio-temporal stage and one
-SFRB block in each frequency stage. These depths can be changed with
-`--ms-stmb-depth-1`, `--ms-stmb-depth-2`, `--sfrb-depth-1`, and
-`--sfrb-depth-2`.
-
 ## Evaluation
 
 Evaluate one checkpoint:
