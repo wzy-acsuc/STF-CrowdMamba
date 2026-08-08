@@ -1,9 +1,9 @@
 # STF-CrowdMamba: Spatio-Temporal Mamba and Spatial-Frequency Refinement for Video Crowd Counting
 
 ## Overview
-- **We propose a video crowd counting method, termed STF-CrowdMamba, that combines spatio-temporal Mamba modeling with frequency-domain enhancement. Parallel spatio-temporal and frequency-domain branches are constructed to capture long-range dependencies and frequency-domain information, thereby improving complementarity across feature domains. To the best of our knowledge, this is the first study to apply Mamba to multi-frame video crowd counting.
-- **We develop MS-STMB, which arranges consecutive frame features into a joint temporal-height-width sequence and employs bidirectional selective scanning to establish long-range spatio-temporal associations across frames. Average- and max-pooling paths are further introduced to extract crowd features at different spatial scales.
-- **Experiments on five public video crowd counting datasets demonstrate that STF-CrowdMamba achieves competitive counting performance.
+- We propose a video crowd counting method, termed STF-CrowdMamba, that combines spatio-temporal Mamba modeling with frequency-domain enhancement. Parallel spatio-temporal and frequency-domain branches are constructed to capture long-range dependencies and frequency-domain information, thereby improving complementarity across feature domains. To the best of our knowledge, this is the first study to apply Mamba to multi-frame video crowd counting.
+- We develop MS-STMB, which arranges consecutive frame features into a joint temporal-height-width sequence and employs bidirectional selective scanning to establish long-range spatio-temporal associations across frames. Average- and max-pooling paths are further introduced to extract crowd features at different spatial scales.
+- Experiments on five public video crowd counting datasets demonstrate that STF-CrowdMamba achieves competitive counting performance.
 
 <p align="center">
   <img width="1031" height="564" alt="Overall architecture of STF-CrowdMamba" src="https://github.com/user-attachments/assets/bc7c7f29-3248-494d-b456-5828f73d9b0c" />
@@ -13,11 +13,21 @@
   <b>Figure 1. Overall architecture of STF-CrowdMamba.</b>
 </p>
 
+<p align="center">
+  <img width="4234" height="1732" alt="Visualization results on the Bus dataset" src="https://github.com/user-attachments/assets/70b09fb8-051c-4c45-a8ab-8f1d767e85fa" />
+</p>
 
-<img width="4234" height="1732" alt="图片3" src="https://github.com/user-attachments/assets/70b09fb8-051c-4c45-a8ab-8f1d767e85fa" />
+<p align="center">
+  <b>Visualization results on the Bus dataset.</b>
+</p>
 
+<p align="center">
+  <img src="./venice_visualization.png" alt="Visualization results on the Venice dataset" width="100%">
+</p>
 
-
+<p align="center">
+  <b>Visualization results on the Venice dataset.</b>
+</p>
 
 ## Repository Structure
 
