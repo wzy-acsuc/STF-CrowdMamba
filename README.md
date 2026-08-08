@@ -14,19 +14,23 @@
 </p>
 
 <p align="center">
-  <img width="4234" height="1732" alt="Visualization results on the Bus dataset" src="https://github.com/user-attachments/assets/70b09fb8-051c-4c45-a8ab-8f1d767e85fa" />
+  <img width="4234" height="1732"
+       alt="Visualization results on the Bus dataset"
+       src="https://github.com/user-attachments/assets/70b09fb8-051c-4c45-a8ab-8f1d767e85fa" />
 </p>
 
 <p align="center">
-  <b>Visualization results on the Bus dataset.</b>
+  <b>Fig. 2. Visualization results on the Bus dataset.</b>
 </p>
 
 <p align="center">
-  <img src="./venice_visualization.png" alt="Visualization results on the Venice dataset" width="100%">
+  <img src="./Fig3.png"
+       alt="Visualization results on the Venice dataset"
+       width="100%" />
 </p>
 
 <p align="center">
-  <b>Visualization results on the Venice dataset.</b>
+  <b>Fig. 3. Visualization results on the Venice dataset.</b>
 </p>
 
 ## Repository Structure
