@@ -53,15 +53,8 @@ Using the Bus dataset as an example, arrange the files as follows:
 ```text
 Bus/
 ├── train/
-│   ├── ground_truth/
-│   │   ├── xxx_0.h5
-│   │   └── xxx_10.h5
-│   └── images/
-│       ├── xxx_0.jpg
-│       └── xxx_10.jpg
 ├── test/
-│   ├── ground_truth/
-│   └── images/
+├── val/
 └── bus_roi.npy
 ```
 
@@ -108,11 +101,3 @@ python auto_test.py \
   /path/to/Bus/bus_roi.npy
 ```
 
-Use `--seed` to reproduce experiments with a fixed random seed.
-
-## Citation
-
-If this code is useful in your research, please cite:
-
-> Zheng-Yan Wu and Miao-Gen Ling. *Video Crowd Counting Based on
-> Spatio-Temporal Mamba and Frequency Enhancement*.
