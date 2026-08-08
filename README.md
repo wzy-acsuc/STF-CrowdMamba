@@ -57,10 +57,8 @@ kernels are used.
 
 ## Datasets
 
-- Bus images: [Baidu Netdisk](https://pan.baidu.com/s/15zncl2jPMnX_1RgiS_ejww?pwd=vp7j)
-- Bus ground truth: [Baidu Netdisk](https://pan.baidu.com/s/1-NNZvIxcLeVjnEmaQfAi7Q?pwd=5slv)
-- Canteen images: [Baidu Netdisk](https://pan.baidu.com/s/1ze84yTUw-Y2-Z5sUUzWnng?pwd=j17o)
-- Canteen ground truth: [Baidu Netdisk](https://pan.baidu.com/s/10b_H4sZCN_NORDVRJ0yQvg?pwd=b41u)
+- Bus images: [Baidu Netdisk](https://pan.baidu.com/s/1DQGiTBQF3S9vCpy_EMUzsw?pwd=8ybx)
+- Bus ground truth: [Baidu Netdisk](https://pan.baidu.com/s/1i3KorhBNSmQ_AsiXmynpYA?pwd=xr8h)
 
 Using the Bus dataset as an example, arrange the files as follows:
 
