@@ -24,9 +24,9 @@
 </p>
 
 <p align="center">
-  <img src="./Fig3.png"
+  <img width="7690" height="2164" 
        alt="Visualization results on the Venice dataset"
-       width="100%" />
+       src="https://github.com/user-attachments/assets/ab62abc2-ff82-4c3b-8f0d-dd1b8cca707f" />
 </p>
 
 <p align="center">
