@@ -6,7 +6,7 @@ import torch
 import torch.nn as nn
 from torchvision import transforms
 from utils.logger import setlogger
-from model.ddcm import STFMamba
+from model.stf_crowdmamba import STFCrowdMamba
 from utils.time_estimator import TimeEstimator
 from utils.utils import Utils
 
@@ -70,7 +70,7 @@ class Trainer(Utils):
                         setattr(self.args, name, value)
             else:
                 print(f'checkpoint not found at {self.load}')
-        self.model = STFMamba(is_train=True, **self.model_config).to(self.device)
+        self.model = STFCrowdMamba(is_train=True, **self.model_config).to(self.device)
         self.criterion = nn.MSELoss(reduction='sum').to(self.device)
         self.optimizer = torch.optim.AdamW(self.model.parameters(), self.args.lr, weight_decay=self.args.weight_decay)
         if checkpoint is not None:

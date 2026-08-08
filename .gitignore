@@ -31,3 +31,4 @@ logs/
 result.csv
 *_efficiency_results.json
 
+mamba_wheel/

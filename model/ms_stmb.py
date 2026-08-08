@@ -1,11 +1,5 @@
-"""Spatio-temporal MB blocks used in place of the original Ddcb blocks.
-
-The block preserves the supplied MB architecture: projection and gate, spatial
-depth-wise convolutions, SSM output norms, spatial upsampling, output
-projection, dropout, and an internal residual. Its low-resolution part differs
-from the reference MB: independent average-pooling and max-pooling branches
-operate at H/2 x W/2, are fused, and are upsampled once. Only the SSM scan is
-changed to a bidirectional scan over a joint T-H-W sequence.
+"""Multi-Scale Spatio-Temporal Mamba Block (MS-STMB)
+for STF-CrowdMamba.
 """
 
 import math
@@ -21,7 +15,7 @@ except ImportError:  # Raised with an actionable message when the block is insta
     selective_scan_fn = None
 
 
-class SSMTHW(nn.Module):
+class BidirectionalTHWSSM(nn.Module):
     """Two-way selective scan over a volume with shape [B, T, C, H, W]."""
 
     def __init__(
@@ -150,7 +144,7 @@ class SSMTHW(nn.Module):
         return output.reshape(batch, channels, frames, height, width).permute(0, 2, 3, 4, 1).contiguous()
 
 
-class SpatioTemporalMB(nn.Module):
+class MSSTMB(nn.Module):
     """MB with a pre-normalized raw residual and joint T-H-W selective scans."""
 
     def __init__(self, d_model, d_state=16, expand=2., dropout=0., bias=False, device=None, dtype=None):
@@ -173,9 +167,9 @@ class SpatioTemporalMB(nn.Module):
         self.ca_high = self._spatial_dwconv(**factory_kwargs)
         self.ca_avg = self._spatial_dwconv(**factory_kwargs)
         self.ca_max = self._spatial_dwconv(**factory_kwargs)
-        self.ssm_high = SSMTHW(d_model=d_model, d_state=d_state, expand=expand, device=device, dtype=dtype)
-        self.ssm_avg = SSMTHW(d_model=d_model, d_state=d_state, expand=expand, device=device, dtype=dtype)
-        self.ssm_max = SSMTHW(d_model=d_model, d_state=d_state, expand=expand, device=device, dtype=dtype)
+        self.ssm_high = BidirectionalTHWSSM(d_model=d_model, d_state=d_state, expand=expand, device=device, dtype=dtype)
+        self.ssm_avg = BidirectionalTHWSSM(d_model=d_model, d_state=d_state, expand=expand, device=device, dtype=dtype)
+        self.ssm_max = BidirectionalTHWSSM(d_model=d_model, d_state=d_state, expand=expand, device=device, dtype=dtype)
 
     def _spatial_dwconv(self, **factory_kwargs):
         return nn.Sequential(
@@ -244,7 +238,7 @@ class SpatioTemporalMB(nn.Module):
         return output if has_batch_dimension else output.squeeze(0)
 
 
-class SpatioTemporalMBLayer(nn.Module):
+class MSSTMBBlock(nn.Module):
     """A stack of residual spatio-temporal MB blocks for one STF-Mamba stage."""
 
     def __init__(self, in_channel, num_blocks=2, d_state=16, expand=2., dropout=0.):
@@ -252,7 +246,7 @@ class SpatioTemporalMBLayer(nn.Module):
         if num_blocks < 1:
             raise ValueError("num_blocks must be at least 1")
         self.blocks = nn.ModuleList(
-            SpatioTemporalMB(in_channel, d_state=d_state, expand=expand, dropout=dropout)
+            MSSTMB(in_channel, d_state=d_state, expand=expand, dropout=dropout)
             for _ in range(num_blocks)
         )
 

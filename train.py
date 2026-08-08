@@ -16,7 +16,7 @@ canteen  False  train val test  'canteen'   resize to 640 x 360
 venice   False  train val test  'venice' 
 """
 
-parser = argparse.ArgumentParser(description='STF-Mamba training')
+parser = argparse.ArgumentParser(description='STF-CrowdMamba training')
 parser.add_argument('dataset_path', metavar='DATASET', help='path to dataset')
 parser.add_argument('save_path', metavar='SAVEPATH', help='the path to save checkpoint')
 parser.add_argument('-sa', '--save_all', metavar='ISSAVE', help='is save all local', default=False)

@@ -1,10 +1,8 @@
-"""Frequency enhancement blocks for the STF-Mamba frequency branch."""
-
 import torch
 import torch.nn as nn
 
 
-class FEB(nn.Module):
+class SFRB(nn.Module):
     """Reference FB block with an input LayerNorm and a raw-feature residual.
 
     The input and output use the STF-Mamba layout [T, C, H, W]. FFT processing is
@@ -46,14 +44,14 @@ class FEB(nn.Module):
         return enhanced + raw
 
 
-class FEBLayer(nn.Module):
+class SFRBBlock(nn.Module):
     """A stack of independent FEB blocks for one STF-Mamba frequency stage."""
 
     def __init__(self, dim, depth=2, norm_eps=1e-6):
         super().__init__()
         if depth < 1:
             raise ValueError("depth must be at least 1")
-        self.blocks = nn.ModuleList(FEB(dim, norm_eps=norm_eps) for _ in range(depth))
+        self.blocks = nn.ModuleList(SFRB(dim, norm_eps=norm_eps) for _ in range(depth))
 
     def forward(self, x):
         for block in self.blocks:

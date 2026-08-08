@@ -4,7 +4,7 @@ from pathlib import Path
 import torch
 import torch.nn as nn
 from torchvision import transforms
-from model.ddcm import STFMamba
+from model.stf_crowdmamba import STFCrowdMamba
 from utils.time_estimator import TimeEstimator
 from utils.utils import Utils
 
@@ -34,7 +34,7 @@ class Tester(Utils):
                 'sfrb_depth_1': self.args.sfrb_depth_1,
                 'sfrb_depth_2': self.args.sfrb_depth_2,
             })
-            self.model = STFMamba(is_train=False, **model_config).to(self.device)
+            self.model = STFCrowdMamba(is_train=False, **model_config).to(self.device)
             self.model.load_state_dict(checkpoint['model'])
         else:
             raise Exception(f'args not found at {self.args.pth_path}')
