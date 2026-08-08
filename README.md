@@ -1,22 +1,9 @@
 # STF-CrowdMamba: Spatio-Temporal Mamba and Spatial-Frequency Refinement for Video Crowd Counting
 
 ## Overview
-
-STF-CrowdMamba is designed to model long-range spatio-temporal dependencies while maintaining efficient computation and complementary feature representations. The network contains two parallel branches:
-
-- **Multi-Scale Spatio-Temporal Mamba Block (MS-STMB):** organizes consecutive
-  frames as a joint temporal-height-width sequence, models long-range
-  spatio-temporal relationships with bidirectional selective scans, and
-  aggregates multi-scale crowd features through multiple paths.
-- **Spatial-Frequency Refinement Block (SFRB):** separately refines the
-  amplitude and phase spectra of frame-level features and reconstructs enhanced
-  spatial features through the inverse Fourier transform.
-- **Dual-branch density regression:** fuses the spatio-temporal and frequency
-  representations to predict crowd density maps.
-
-Experiments on five public video crowd-counting datasets demonstrate the
-effectiveness of STF-Mamba. On the Bus and Canteen datasets, its MAE/RMSE are
-respectively 6.1%/4.2% and 5.5%/7.2% lower than those of the second-best method.
+- **We propose a video crowd counting method, termed STF-CrowdMamba, that combines spatio-temporal Mamba modeling with frequency-domain enhancement. Parallel spatio-temporal and frequency-domain branches are constructed to capture long-range dependencies and frequency-domain information, thereby improving complementarity across feature domains. To the best of our knowledge, this is the first study to apply Mamba to multi-frame video crowd counting.
+- **We develop MS-STMB, which arranges consecutiveframe features into a joint temporal-height-width sequence and employs bidirectional selective scanning to establish long-range spatio-temporal associations across frames. Average- and max-pooling paths are further introduced to extract crowd features at different spatial scales.
+- **Experiments on five public video crowd counting datasets demonstrate that STF-CrowdMamba achieves competitive counting performance.
 
 ## Repository Structure
 
