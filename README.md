@@ -2,9 +2,7 @@
 
 ## Overview
 
-STF-CrowdMamba is designed to model long-range spatio-temporal dependencies while
-maintaining efficient computation and complementary feature representations.
-The network contains two parallel branches:
+STF-CrowdMamba is designed to model long-range spatio-temporal dependencies while maintaining efficient computation and complementary feature representations. The network contains two parallel branches:
 
 - **Multi-Scale Spatio-Temporal Mamba Block (MS-STMB):** organizes consecutive
   frames as a joint temporal-height-width sequence, models long-range
